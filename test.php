@@ -18,52 +18,40 @@
 <?php 
 
    
-         $name = "Ahmad";
-         $name = "Ali";
-         $name = "Maryam";
-
-
-        // echo $name;
-
-   /*
-
-         $customers = array("Ali","Ahmad","Fatima","Maryam","Faisal","Farmanullah","Mhamood");  // Numeric array...
-
+         // single dimension numeric array...
+         $customers = array("Ali","Ahmad","Fatima","Maryam","Faisal","Farmanullah","Mhamood"); 
 
               for($i = 0; $i<count($customers);$i++)
                    echo $customers[$i]."<br/>";
 
                    
 
-
+          // Multi-dimensional numeric array.
           $custmers = array(
-                              array("Ali","Ahmad","Fawad"),
-                              array("Fatima","Maryam", "Layla"),
-                              array("Faisal", "Sana", "Kamal")
+                              array("Ali","Ahmad"),
+                              array("Fatima","Maryam"),
+                              array("Faisal", "Sana")
                           );
 
-            echo $custmers[1][2];
+            echo $custmers[1][1];
 
                
+            // Single dimensional associative array.
+            $names = array('name'=> "Ali", 'lname'=> "Naseri", 'email'=> "ali@yahoo.com", 'address'=> "Kabul");
+            echo $names['email'];
 
-            $names = array('name'=> "Ali", 'lname'=> "Naseri", 'email'=> "ali@yahoo.com");
-
-
-                   echo $names['email'];
-
-                   
-
+            //Multi-dimensional associative array.
             $names = array(
 
-                     "Male"=>array("Ali", "Ahmad","Faisal","Farhad"),
-                     "Female"=>array("Maryam", "Fatima", "Layla","Noda")
+                     "Male"=>array("Ali", "Ahmad","Faisal","Farhad","Nasibullah"),
+                     "Female"=>array("Maryam", "Fatima", "Layla","Noda","Fahima")
 
             );
 
                 echo $names['Male'][3];
 
 
-                */
+                
 
 
 
