@@ -60,7 +60,7 @@
                 echo $num."<br/>";
                 $num = $num - 1;
              }
-              */
+              
 
              $foods = array("Burger","Pasta","Pizza","Chips");
              $num = 0;
@@ -70,6 +70,17 @@
                  echo "<br/>";
                  $num = $num + 1;
              }
+
+             */
+
+             for ($i=0; $i<count($foods); $i++) { 
+                 echo $foods[$i];
+                 echo "<br/>";
+             }
+
+             
+
+
 
              
 
