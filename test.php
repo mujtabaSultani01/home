@@ -215,11 +215,45 @@
 
 
       <?php
-                date_default_timezone_set('Asia/Kabul');
-                echo date("Y/m/d h:i:s");
+                //date_default_timezone_set('Asia/Kabul');
+                //echo date("Y/m/d h:i:s");
 
+      /*
+        if (isset($_POST['submit'])) {
+            
+            $username = $_POST['username'];
+            $password = $_POST['password'];
 
+            if($username == "ali" && $password == "ali@123"){
+
+               header("location:test1.php");
+            }
+            else
+                echo "<span style='color:red'>Ops!!!<br/>Incorrect username or password!!!</span>";
+        }
+        */
 
       ?>
+
+<!--
+    <form method="POST" action="" enctype="multipart/form-data">
+              <table>
+              <tr>
+              <td>Username:</td>
+              <td><input type="text" name="username"></td>
+          </tr>
+          <tr>
+              <td>Password:</td>
+              <td><input type="password" name="password"></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td><input type="submit" name="submit"></td>
+          </tr>
+      </table>
+          </form>
+      -->
+
+
 </body>
 </html>
