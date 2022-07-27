@@ -71,12 +71,34 @@
                  $num = $num + 1;
              }
 
-             */
+
 
              for ($i=0; $i<count($foods); $i++) { 
                  echo $foods[$i];
                  echo "<br/>";
              }
+
+             */
+
+             //PHP function...
+
+             // simple program to return the fibbonaccia resutl.
+
+             function fibo($num){
+                if($num == 0)
+                    return 0;
+                elseif ($num == 1) {
+                    return 1;
+                }
+                else
+                    return fibo($num-1) + fibo($num-2);
+             }
+
+             $number = 7;
+             $fi = fibo($number);
+             echo "The fibbonaccia of ".$number." is: ".$fi;
+
+
 
              
 
