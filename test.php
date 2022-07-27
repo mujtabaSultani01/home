@@ -12,8 +12,6 @@
       <hr>
       <hr>
       
-</body>
-</html>
 
 <?php 
 
@@ -78,7 +76,7 @@
                  echo "<br/>";
              }
 
-             */
+             
 
              //PHP function...
 
@@ -98,13 +96,130 @@
              $fi = fibo($number);
              echo "The fibbonaccia of ".$number." is: ".$fi;
 
-
-
              
 
+             function calcuNetSalary($hours, $salary){
 
+                return $hours * $salary;
 
-             
+             }
+
+             function calcuFinalSalary($netSalary, $tax){
+
+                return $result = $netSalary - (($netSalary*5)/100);
+             }
+
+             $hours = 40;
+             $salary_hour = 500;
+             $tax = 5;
+
+             $netSalary = calcuNetSalary($hours, $salary_hour);
+             $finalSalary = calcuFinalSalary($netSalary, $tax);
+
+             echo "your total salary is: ".$finalSalary;
+
+             //PHP Forms...
+
+             if(isset($_GET['submit'])){
+             echo $username = $_GET['username'];
+             echo "<br/>";
+             echo $password = $_GET['password'];
+         }
+
+         */
+
+?>
+<!--
+    <form>
+       <table>
+           <tr>
+            <td>Username:</td>
+            <td><input type="text" name="username"></td>
+           </tr>
+           <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password"></td>
+           </tr>
+           <tr>
+                <td></td>
+                <td><input type="submit" name="submit" value="Save"></td>
+           </tr>
+       </table>
+   </form>
+   -->
+
+<?php
+    /*
+         if(isset($_POST['submit'])){
+
+            $username = $_POST['username'];
+            $gender = "";
+
+           /*
+            if ($_POST["gender"] == "Male") {
+
+                echo "<span style='color:green'>Welcome Mr.: </span>".$username;
+            }
+            else
+            
+                echo "<span style='color:green'>Welcome Ms.: </span>".$username;
+                
+                */
+
+                /*
+                if ($_POST["gender"] == "Male") {
+
+                $gender = "Welcome Mr. ";
+                }
+               else{
+
+                $gender = "Welcome Ms. ";
+               }
+            
+                echo "<span style='color:green'>".$gender.": </span>".$username;
+
+             }
+         else{
+
+         */
+            
 
 
 ?>
+
+ <!--
+   
+          <form method="POST" action="" enctype="multipart/form-data">
+              <table>
+              <tr>
+              <td>Username:</td>
+              <td><input type="text" name="username"></td>
+          </tr>
+          <tr>
+              <td>Gender</td>
+              <td><select name="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+              </select><input style="width: 108px;" type="submit" name="submit"></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+          </tr>
+      </table>
+          </form>
+      -->
+           
+      <?php //} ?>
+
+
+
+      <?php
+                date_default_timezone_set('Asia/Kabul');
+                echo date("Y/m/d h:i:s");
+
+
+
+      ?>
+</body>
+</html>
