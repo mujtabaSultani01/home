@@ -17,6 +17,7 @@
 
 <?php 
 
+        /*
    
          // single dimension numeric array...
          $customers = array("Ali","Ahmad","Fatima","Maryam","Faisal","Farmanullah","Mhamood"); 
@@ -50,11 +51,27 @@
 
                 echo $names['Male'][3];
 
+               
 
-                
+            //PHP loops...
+             $num = 5;
+             while($num>0){
 
+                echo $num."<br/>";
+                $num = $num - 1;
+             }
+              */
 
+             $foods = array("Burger","Pasta","Pizza","Chips");
+             $num = 0;
+             while($num<count($foods)){
 
+                echo $foods[$num];
+                 echo "<br/>";
+                 $num = $num + 1;
+             }
+
+             
 
 
 ?>
