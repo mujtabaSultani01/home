@@ -254,6 +254,101 @@
           </form>
       -->
 
+<?php 
 
+ /*
+    $f = fopen("file.txt", "r");
+
+     do{
+
+        echo fgets($f)."<br/>";
+
+    }while(!feof($f));
+
+    fclose($f);
+
+    
+
+    $f = fopen("file.txt", "r+");
+    $text = "this text is written through PHP";
+    //fwrite($f, $text);
+
+    do{
+    
+      echo fgets($f)."<br/>";
+
+    }while(!feof($f))
+
+    
+    
+
+    if (isset($_POST['submit'])) {
+        
+        $name = $_POST['name'].", ";
+
+        $f = fopen("file.txt", "a");
+             fwrite($f, $name);
+             fclose($f);
+    }
+
+    */
+
+
+
+?>
+<!--
+    <form method="post" action="" enctype="multipart/form-data">
+        
+        Insert Name<input type="text" name="name">
+                    <input type="submit" name="submit" value="Save">
+
+    </form>
+
+    <a href="test1.php">display list</a>
+    <hr/>
+-->
+
+    <?php 
+            /*
+            $fi = fopen("file.txt", "r");
+
+            $names = fgetcsv($fi);
+
+              $length = count($names);
+              */
+
+            /*for ($i=0; $i < $length ; $i++) { 
+                
+                echo $names[$i]."<br/>";
+            }
+
+            echo "<ol>";
+
+            for ($i=0; $i < $length - 1 ; $i++) { 
+                
+                echo "<li>".$names[$i]."</li>";
+            }
+
+                echo "</ol>";
+
+            fclose($fi);
+            
+            // website visitor counter...
+
+            $f = fopen("counter.txt", "r");
+            $number = fgets($f);
+            fclose($f);
+            $number++;
+
+            $newFile = fopen("counter.txt", "w");
+
+            fwrite($newFile, $number);
+
+            fclose($newFile);
+
+            echo "<span style='color:green'>Total visits:</span>".$number;
+            */
+    ?>
+        
 </body>
 </html>
