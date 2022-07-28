@@ -348,7 +348,105 @@
 
             echo "<span style='color:green'>Total visits:</span>".$number;
             */
+            //unlink("notepad.txt");
+            //rename("notepad.txt", "newNotepad.txt");
+            //copy("newNotepad.txt", "abc/newNewNewNotepad.txt");
+
+            //mkdir("Mujtaba Sultani");
+            //mkdir("abc/First_directory");
+
+            //rmdir("abc/First_directory");
+            //rmdir("Mujtaba Sultani");
+
+            //rename("Mujtaba Sultani", "Mujtaba Hamta");
+            //rmdir("Mujtaba Hamta");
+            /*
+
+            if (isset($_POST['submit'])) {
+                
+                $username = $_POST['username']."<br/>";
+
+                if(move_uploaded_file($_FILES['picture']['tmp_name'], "img/".$_FILES['picture']['name'])){
+                echo "You're: ".$username;
+                //$var = $_FILES['picture']['name'];
+                //echo '<img src="img/'.$var.'" width="300">';
+                echo '<img src="img/'.$_FILES['picture']['name'].'" width="300">';
+
+                    }
+                else{
+                    echo "<span style='color:red'>Opps! your image has not been uploaded.</span>";
+                }
+            }
+            */
+
+
+
+            if (isset($_POST['username'])) {
+                
+                $username = $_POST['username'];
+                $ftype = $_FILES['picture']['type'];
+                $fsize = $_FILES['picture']['size'];
+
+                $fileCorrect = 0;
+
+                switch ($ftype) {
+                    case 'image/png':
+                        $fileCorrect = 1;
+                        break;
+                    case 'image/jpeg':
+                        $fileCorrect = 1;
+                        break;
+                    case 'image/jpg':
+                        $fileCorrect = 1;
+                        break;
+                    default:
+                        $fileCorrect = 0;
+                        break;
+                }
+
+                if($fileCorrect == 0){
+
+                    echo "<span style='color:red'>Pleas choose a correct format (jpg*, png*, jpeg*)</span>";
+                }
+                elseif ($fsize > 1800000) {
+                    echo "<span style='color:red'>Please choose size less than 4MB.</span>";
+                }
+                else{
+
+                    if (move_uploaded_file($_FILES['picture']['tmp_name'], "img/".$_FILES['picture']['name'])) {
+                        
+                        echo "You're: ".$username."<br/>";
+                        echo "<img src='img/".$_FILES['picture']['name']."' width='300'>";
+                    }
+
+                    else{
+
+                        echo "<span style='color:red'>Opps! your image has not been uploaded... Try again!</span>";
+                    }
+                }
+            }
+
+
     ?>
-        
+     
+    <form method="POST" action="" enctype="multipart/form-data">
+
+              <table>
+              <tr>
+              <td>Username:</td>
+              <td><input type="text" name="username"></td>
+          </tr>
+          <tr>
+              <td>Choose your Photo:</td>
+              <td><input type="file" name="picture"></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td><input type="submit" name="submit"></td>
+          </tr>
+      </table>
+          </form>
+
+
 </body>
 </html>
