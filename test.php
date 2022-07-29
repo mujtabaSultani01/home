@@ -380,7 +380,7 @@
             */
 
 
-
+            /*
             if (isset($_POST['username'])) {
                 
                 $username = $_POST['username'];
@@ -425,10 +425,10 @@
                     }
                 }
             }
-
+    */
 
     ?>
-     
+     <!--
     <form method="POST" action="" enctype="multipart/form-data">
 
               <table>
@@ -447,6 +447,129 @@
       </table>
           </form>
 
+          -->
+
+          <?php 
+
+             //setcookie("firstCookie", "firstCookie Set", time()+3600);
+
+
+          ?>
+
+
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<?php 
+
+    /*
+    //$color = "";
+    
+    if (isset($_POST['submit'])) {
+        
+        $color = $_POST['color'];
+        setcookie("bcolor", $color, time()+3600);
+
+    }
+    elseif ($_COOKIE['bcolor']) {
+        
+        $color = $_COOKIE['bcolor'];
+    }
+
+    else{
+
+        $color = "violet";
+    }
+
+    */
+
+?>
+<body bgcolor="<?php // echo $color ?>">
+
+    <!--
+    <form method="POST" action="" enctype="multipart/form-data">
+        
+        Choose color:<select name="color">
+            
+                    <option value="lightgreen">Green</option>
+                    <option value="lightblue">Blue</option>
+                    <option value="lightgray">Gray</option>
+                    <option value="pink">Pink</option>
+        </select>
+        <input type="submit" name="submit" value="Change">
+
+    </form>
+-->
+
+<?php 
+    
+    /*
+
+    if (isset($_POST['submit'])) {
+        
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        if ($username == "ahmad" && $password == "ahmad@123") {
+            
+            if ($_POST['remember'] == "on") {
+                
+                setcookie("username", $username, time() + 3600);
+                setcookie("password", $password, time() + 3600);
+            }
+
+            header("location:test1.php");
+            
+        }
+        else{
+
+            echo "<span style='color:red'>Opps! Username or password is incorrect! Try again!</span>";
+        }
+    }
+
+        $uname = "";
+        $pass = "";
+
+    if ($_COOKIE['username']) {
+        
+         $uname = $_COOKIE['username'];
+         $pass = $_COOKIE['password'];
+    }
+    */
+
+?>
+
+<!--
+  <form method="POST" action="" enctype="multipart/form-data">
+      
+        <table>
+            
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="username" value="<?php echo $uname; ?>"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" value="<?php echo $pass; ?>"></td>
+            </tr>
+            <tr>
+                <td>Remember my Password</td>
+                <td><input type="checkbox" name="remember"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submit"></td>
+            </tr>
+
+        </table>
+
+  </form>
+-->
 
 </body>
 </html>
